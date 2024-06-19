@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
-from decouple import config
+import decouple
 import dj_database_url 
 
 
@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-a@214cp_e6%ww_#-k4^9@=ej)oq+(!+)%@b^o0u&a$#hy@tt$!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
    
     'resumesite',
 ]
